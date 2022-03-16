@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -34,8 +35,9 @@ namespace Payroll_Web_App.Controllers
         //maybe consider a rest api which creates a json with the data
         public async Task<IActionResult> ShowSearchResult(String SearchPhrase)
         {
-            //make search with lastname, department, etc
-            return View("Index", await _context.Employee.Where(j=>j.FirstName.Contains(SearchPhrase)).ToListAsync());
+            //make search with department, etc
+            //make less wordy
+            return View("Index", await _context.Employee.Where(j =>j.FirstName.Contains(SearchPhrase)||j.LastName.Contains(SearchPhrase)||(j.Id.ToString() == SearchPhrase)).ToListAsync());
         }
 
         // GET: Employees/Details/5
@@ -57,17 +59,20 @@ namespace Payroll_Web_App.Controllers
         }
 
         // GET: Employees/Create
+        [Authorize]
         public IActionResult Create()
         {
             return View();
         }
 
+        //todo: bind part needs more args to work with the other data bits, this could be a super string declared elsware too
         // POST: Employees/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,Position")] Employee employee)
+        public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,Position,email")] Employee employee)
         {
             if (ModelState.IsValid)
             {
@@ -79,6 +84,7 @@ namespace Payroll_Web_App.Controllers
         }
 
         // GET: Employees/Edit/5
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -94,12 +100,14 @@ namespace Payroll_Web_App.Controllers
             return View(employee);
         }
 
+        //todo: bind part needs more args to work with the other data bits, this could be a super string declared elsware too
         // POST: Employees/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,LastName,Position")] Employee employee)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,LastName,Position,email")] Employee employee)
         {
             if (id != employee.Id)
             {
@@ -130,6 +138,7 @@ namespace Payroll_Web_App.Controllers
         }
 
         // GET: Employees/Delete/5
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -148,6 +157,7 @@ namespace Payroll_Web_App.Controllers
         }
 
         // POST: Employees/Delete/5
+        [Authorize]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
