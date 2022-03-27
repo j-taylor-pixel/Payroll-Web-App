@@ -71,7 +71,6 @@ C:\Users\ChefJoJo\source\repos\Payroll Web App\obj\Debug\netcoreapp3.1\Payroll W
 C:\Users\ChefJoJo\source\repos\Payroll Web App\obj\Debug\netcoreapp3.1\Payroll Web App.RazorAssemblyInfo.cs
 C:\Users\ChefJoJo\source\repos\Payroll Web App\obj\Debug\netcoreapp3.1\staticwebassets\Payroll Web App.StaticWebAssets.Manifest.cache
 C:\Users\ChefJoJo\source\repos\Payroll Web App\obj\Debug\netcoreapp3.1\staticwebassets\Payroll Web App.StaticWebAssets.xml
-C:\Users\ChefJoJo\source\repos\Payroll Web App\obj\Debug\netcoreapp3.1\scopedcss\bundle\Payroll Web App.styles.css
 C:\Users\ChefJoJo\source\repos\Payroll Web App\obj\Debug\netcoreapp3.1\Payroll Web App.TagHelpers.input.cache
 C:\Users\ChefJoJo\source\repos\Payroll Web App\obj\Debug\netcoreapp3.1\Payroll Web App.TagHelpers.output.cache
 C:\Users\ChefJoJo\source\repos\Payroll Web App\obj\Debug\netcoreapp3.1\Payroll Web App.RazorCoreGenerate.cache
