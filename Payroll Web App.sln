@@ -5,7 +5,7 @@ VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payroll Web App", "Payroll Web App\Payroll Web App.csproj", "{7EF15C9D-266C-42C1-AFBF-756236ED606B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payroll.Tests", "Payroll.Tests\Payroll.Tests.csproj", "{DED76EC1-BE67-421A-90F1-CC13006E9FAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PayrollApp.UnitTest", "PayrollApp.UnitTest\PayrollApp.UnitTest.csproj", "{29A76B48-7578-4783-B15C-20A23D0051B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{7EF15C9D-266C-42C1-AFBF-756236ED606B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EF15C9D-266C-42C1-AFBF-756236ED606B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EF15C9D-266C-42C1-AFBF-756236ED606B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DED76EC1-BE67-421A-90F1-CC13006E9FAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DED76EC1-BE67-421A-90F1-CC13006E9FAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DED76EC1-BE67-421A-90F1-CC13006E9FAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DED76EC1-BE67-421A-90F1-CC13006E9FAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29A76B48-7578-4783-B15C-20A23D0051B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29A76B48-7578-4783-B15C-20A23D0051B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29A76B48-7578-4783-B15C-20A23D0051B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29A76B48-7578-4783-B15C-20A23D0051B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
