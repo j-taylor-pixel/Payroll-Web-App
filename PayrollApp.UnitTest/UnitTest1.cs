@@ -7,7 +7,7 @@ namespace Payroll.Tests
     /// Filler unit tests to run on ci/cd pipeline
     /// As employee functionality increases I can start adding tests here
     /// </summary>
-    public class UnitTest1 
+    public class UnitTest1
     {
         [Fact]
         public void Test1()
