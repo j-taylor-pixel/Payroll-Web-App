@@ -31,7 +31,7 @@ namespace Payroll_Web_App.Models
         //company info
         public string Position { get; set; }
         public string department { get; set; }
-        public int hourlyRate { get; set; }
+        public int hourlyRate { get; set; } //this should be double nooo?
         public int annualRate { get; set; }
         
 
